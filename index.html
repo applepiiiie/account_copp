@@ -480,6 +480,12 @@
 			$('body').toggleClass('lock');
 		})
 	})
+	$(document).ready(function() {
+		$('.header_link').click(function(event) {
+			$('.navigation__burger, .navigation').removeClass('active');
+			$('body').removeClass('lock')
+		});
+	});
 </script>
 </body>
 
