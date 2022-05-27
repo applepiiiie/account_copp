@@ -33,13 +33,13 @@
 					<p class="name">Максим Юмаков</p>
 					<p class="school">Школа №5, 11Л</p>
 					<nav class="menu">
-						<li><a href="#account">Личный кабинет</a></li>
-						<li><a href="#meetings">Ближайшие встречи</a></li>
-						<li><a href="#calendar">Расписание</a></li>
-						<li><a href="#evaluation">Оценивание</a></li>
-						<li><a href="#recommend">Рекомендации</a></li>
-						<li><a href="#history">История</a></li>
-						<li><a href="">Выход</a></li>
+						<li class="menu__link"><a href="#account">Личный кабинет</a></li>
+						<li class="menu__link"><a href="#meetings">Ближайшие встречи</a></li>
+						<li class="menu__link"><a href="#calendar">Расписание</a></li>
+						<li class="menu__link"><a href="#evaluation">Оценивание</a></li>
+						<li class="menu__link"><a href="#recommend">Рекомендации</a></li>
+						<li class="menu__link"><a href="#history">История</a></li>
+						<li class="menu__link"><a href="">Выход</a></li>
 					</nav>
 				</div>
 			</section>
@@ -479,9 +479,9 @@
 			$('.navigation__burger, .navigation').toggleClass('active');
 			$('body').toggleClass('lock');
 		})
-	})
+	});
 	$(document).ready(function() {
-		$('.header_link').click(function(event) {
+		$('.menu__link').click(function(event) {
 			$('.navigation__burger, .navigation').removeClass('active');
 			$('body').removeClass('lock')
 		});
