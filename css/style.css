@@ -1000,6 +1000,10 @@ h4 {
     width: 100%;
     height: 100%;
   }
+
+  #table tr{
+    height: 45px;
+  }
 }
 @media (max-width: 500px) {
   .account .account_list .account_list-element {
