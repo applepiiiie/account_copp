@@ -1001,7 +1001,7 @@ h4 {
     height: 100%;
   }
 
-  #table tr{
+  .recommendations table tr{
     height: 45px;
   }
 }
