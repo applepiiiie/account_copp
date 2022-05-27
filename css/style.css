@@ -333,6 +333,11 @@ h4 {
   font-size: 20px;
 }
 
+.meeting__info-text a{
+  color: #1D9BF0;
+  border-bottom: 1px solid #1D9BF0;
+}
+
 .meetings_header {
   margin-bottom: 20px;
 }
@@ -385,8 +390,17 @@ h4 {
   font-size: 23px;
   margin-bottom: 25px;
 }
+
+.navigation .menu li a:hover{
+  border-bottom: 1px solid #c4c4c4;
+  transition: all 0.5s ease-out;
+}
+
 .navigation .menu li a {
   color: #fff;
+  padding-bottom: 2px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-out;
 }
 
 #meetings:before,
