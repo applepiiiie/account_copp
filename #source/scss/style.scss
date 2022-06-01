@@ -117,6 +117,13 @@ $maxWidthContainer: "размер конейнера";
   }
 }
 @font-face {
+  font-family: 'Proxima Nova Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/proximanova_light.woff) format("woff"),
+        url(../fonts/proximanova_light.ttf) format("ttf");
+}
+@font-face {
   font-family: 'Proxima Nova Regular';
   font-style: normal;
   font-weight: normal;
@@ -126,7 +133,7 @@ $maxWidthContainer: "размер конейнера";
 @font-face {
   font-family: 'Proxima Nova Bold';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   src: url(../fonts/proximanova_bold.woff) format("woff"),
           url(../fonts/proximanova_bold.ttf) format("ttf");
 }
@@ -135,6 +142,7 @@ body,
   font-family: 'Proxima Nova Regular';
 }
 body {
+  background-color: #F5F5F5;
   line-height: 1.3;
 }
 // настройка для прижатия footer к низу страницы
@@ -268,7 +276,7 @@ h4 {
 }
 .content {
   margin-top: 50px;
-  padding-left: 21%;
+  padding-left: 23%;
 }
 .meetings_header,
 .recommendations__header {
@@ -284,10 +292,17 @@ h4 {
 }
 .meeting__element-text {
   font-size: 25px;
-  line-height: 1.3;
+  line-height: 37.5px;
+  color: #565656;
+}
+.meeting__title-text{
+  font-size: 30px;
+  color: #222;
+  line-height: 45px;
 }
 .meeting__info-text {
   font-size: 20px;
+  color: #394959;
 }
 .meetings_header {
   margin-bottom: 20px;
@@ -356,7 +371,161 @@ h4 {
   text-align: center;
   margin-bottom: 25px;
 }
+.date{
+  width: 100%;
+  max-height: 240px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  .date__square{
+    background-color: #394959;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+    width: 18%;
+    .date__day{
+      font-size: 70px;
+      font-weight: 300;
+      font-family: 'Proxima Nova Light';
+      letter-spacing: 5px;
+    }
+    .date__month{
+      font-size: 30px;
+      font-family: 'Proxima Nova Bold';
+    }
+  }
+  .date__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 25px;
+    .date__name{
+      font-size: 40px;
+      color: #394959;
+      margin-bottom: 15px;
+    }
+    img{
+      padding: 5px;
+      max-width: 35px;
+    }
+    .date__connect-time{
+      padding-right: 20px;
+      border-right: 1px solid #565656;
+      .date__time{
+        font-size: 25px;
+        color: #565656;
+      }
 
+    }
+    .date__connect-link{
+      padding-left: 20px;
+      .date__link{
+        color: #1D9BF0;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #1D9BF0;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+
+/*Стили для календаря*/
+/*#month-calendar{
+  width: 100%;
+}
+
+.month{
+  margin: 0;
+  padding: 3rem 2rem 2rem;
+  background: none;
+  text-align: center;
+  width: 100%;
+  color: #222;
+  list-style: none;
+}
+
+.month li{
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.month li.prev,
+.month li.next{
+  cursor: pointer;
+}
+
+.month li.prev{
+  float: left;
+}
+
+.month li.next{
+  float: right;
+}
+
+.month li.year-name{
+  font-size: 1.2rem;
+  font-weight: 400;
+}*/
+
+/* дни недели */
+/*.weekdays{
+  margin: 0;
+  padding: 1rem 0;
+  background-color: #dddddd;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+}
+
+.weekdays li{
+  display: inline-block;
+  flex: 0 0 calc(100% / 7);
+  text-align: center;
+}*/
+
+/* дни */
+/*.days{
+  margin: 0;
+  padding: 1rem 0;
+  background-color: #eeeeee;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: flex-start;
+  height: 14rem;
+}
+
+.days li{
+  padding: 0.5rem;
+  list-style: none;
+  display: inline-block;
+  flex: 0 0 calc(100% / 7);
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+.days li.date-now{
+  color: #000;
+  font-weight: 700;
+} */
+.evaluation{
+  color: #222;
+}
 .evaluation__header {
   text-align: center;
   margin-bottom: 30px;
@@ -523,95 +692,6 @@ h4 {
     max-width: 25px;
     max-height: 19px;
   }
-}
-
-#month-calendar{
-  width: 100%;
-}
-
-.month{
-  margin: 0;
-  padding: 3rem 2rem 2rem;
-  background: none;
-  text-align: center;
-  width: 100%;
-  color: #222;
-  list-style: none;
-}
-
-.month li{
-  padding: 0;
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.month li.prev,
-.month li.next{
-  cursor: pointer;
-}
-
-.month li.prev{
-  float: left;
-}
-
-.month li.next{
-  float: right;
-}
-
-.month li.year-name{
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-/* дни недели */
-.weekdays{
-  margin: 0;
-  padding: 1rem 0;
-  background-color: #dddddd;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: left;
-}
-
-.weekdays li{
-  display: inline-block;
-  flex: 0 0 calc(100% / 7);
-  text-align: center;
-}
-
-/* дни */
-.days{
-  margin: 0;
-  padding: 1rem 0;
-  background-color: #eeeeee;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-content: flex-start;
-  height: 14rem;
-}
-
-.days li{
-  padding: 0.5rem;
-  list-style: none;
-  display: inline-block;
-  flex: 0 0 calc(100% / 7);
-  text-align: center;
-  color: #999;
-  font-size: 0.9rem;
-  line-height: 1rem;
-}
-
-.days li.date-now{
-  color: #000;
-  font-weight: 700;
 }
 
 
