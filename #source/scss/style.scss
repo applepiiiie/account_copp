@@ -118,21 +118,18 @@ $maxWidthContainer: "размер конейнера";
 }
 @font-face {
   font-family: 'Proxima Nova Light';
-  font-style: normal;
   font-weight: 300;
   src: url(../fonts/proximanova_light.woff) format("woff"),
         url(../fonts/proximanova_light.ttf) format("ttf");
 }
 @font-face {
   font-family: 'Proxima Nova Regular';
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: url(../fonts/proximanova_regular.woff) format("woff"),
         url(../fonts/proximanova_regular.ttf) format("ttf");
 }
 @font-face {
   font-family: 'Proxima Nova Bold';
-  font-style: normal;
   font-weight: 700;
   src: url(../fonts/proximanova_bold.woff) format("woff"),
           url(../fonts/proximanova_bold.ttf) format("ttf");
@@ -371,11 +368,19 @@ h4 {
   text-align: center;
   margin-bottom: 25px;
 }
+.schedule{
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .date{
-  width: 100%;
-  max-height: 240px;
+  width: 49%;
+  height: 150px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   background-color: #fff;
+  margin-bottom: 20px;
   .date__square{
     background-color: #394959;
     color: #fff;
@@ -384,27 +389,28 @@ h4 {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 25px;
-    width: 18%;
+    padding: 10px;
+    width: 20%;
     .date__day{
-      font-size: 70px;
+      font-size: 55px;
       font-weight: 300;
       font-family: 'Proxima Nova Light';
-      letter-spacing: 5px;
     }
     .date__month{
-      font-size: 30px;
+      font-size: 20px;
       font-family: 'Proxima Nova Bold';
     }
   }
   .date__content{
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 25px;
+    padding: 20px;
+    width: 80%;
     .date__name{
-      font-size: 40px;
+      font-size: 25px;
       color: #394959;
       margin-bottom: 15px;
     }
@@ -413,21 +419,21 @@ h4 {
       max-width: 35px;
     }
     .date__connect-time{
-      padding-right: 20px;
+      padding-right: 18px;
       border-right: 1px solid #565656;
       .date__time{
-        font-size: 25px;
+        font-size: 20px;
         color: #565656;
       }
 
     }
     .date__connect-link{
-      padding-left: 20px;
+      padding-left: 18px;
       .date__link{
         color: #1D9BF0;
         padding-bottom: 2px;
         border-bottom: 1px solid #1D9BF0;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
   }
@@ -752,7 +758,7 @@ h4 {
       font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1920 - 320)));
     }
   }
-  h4 {
+  .meeting__title-text {
     font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
   }
   .meetings {
@@ -761,6 +767,24 @@ h4 {
     }
     .meeting__info-text {
       font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+  .schedule{
+    .date{
+      .date__day{
+        font-size: calc(35px + (55 - 35) * ((100vw - 320px) / (1920 - 320)));
+      }
+      .date__month{
+        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+      }
+      .date__name{
+        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1920 - 320)));
+      }
+      .date__connect{
+        .date__time, .date__link{
+          font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+        }
+      }
     }
   }
   .evaluation{
@@ -792,6 +816,9 @@ h4 {
 }
 
 @media (max-width: 1439px) {
+  .date{
+    height: 140px;
+  }
 	.history{
 		.history__block{
 			display: flex;
@@ -823,7 +850,19 @@ h4 {
 		  }
 	  }
   }
-
+  @media (max-width: 1024px){
+	  .schedule{
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .date{
+        width: 100%;
+      }
+    }
+  }
 
 
 
@@ -964,6 +1003,10 @@ h4 {
 	.meetings_header{
 		margin-top: 20px;
 	}
+  .navigation{
+    width: 100%;
+    height: 100%;
+  }
 	section{
 		width: 100%;
 		margin: 0 auto ;
@@ -991,6 +1034,9 @@ h4 {
     .history__block{
       justify-content: flex-start;
     }
+  }
+  .date{
+    width: 100%;
   }
 }
 @media (max-width: 360px){

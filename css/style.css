@@ -89,19 +89,16 @@ h6 {
 
 @font-face {
   font-family: "Proxima Nova Light";
-  font-style: normal;
   font-weight: 300;
   src: url(../fonts/proximanova_light.woff) format("woff"), url(../fonts/proximanova_light.ttf) format("ttf");
 }
 @font-face {
   font-family: "Proxima Nova Regular";
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: url(../fonts/proximanova_regular.woff) format("woff"), url(../fonts/proximanova_regular.ttf) format("ttf");
 }
 @font-face {
   font-family: "Proxima Nova Bold";
-  font-style: normal;
   font-weight: 700;
   src: url(../fonts/proximanova_bold.woff) format("woff"), url(../fonts/proximanova_bold.ttf) format("ttf");
 }
@@ -421,12 +418,24 @@ h4 {
   margin-bottom: 25px;
 }
 
+.schedule .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .date {
-  width: 100%;
-  max-height: 240px;
+  width: 49%;
+  height: 150px;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   background-color: #fff;
+  margin-bottom: 20px;
 }
 .date .date__square {
   background-color: #394959;
@@ -443,20 +452,20 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 25px;
-  width: 18%;
+  padding: 10px;
+  width: 20%;
 }
 .date .date__square .date__day {
-  font-size: 70px;
+  font-size: 55px;
   font-weight: 300;
   font-family: "Proxima Nova Light";
-  letter-spacing: 5px;
 }
 .date .date__square .date__month {
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Proxima Nova Bold";
 }
 .date .date__content {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,10 +479,11 @@ h4 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 25px;
+  padding: 20px;
+  width: 80%;
 }
 .date .date__content .date__name {
-  font-size: 40px;
+  font-size: 25px;
   color: #394959;
   margin-bottom: 15px;
 }
@@ -482,21 +492,21 @@ h4 {
   max-width: 35px;
 }
 .date .date__content .date__connect-time {
-  padding-right: 20px;
+  padding-right: 18px;
   border-right: 1px solid #565656;
 }
 .date .date__content .date__connect-time .date__time {
-  font-size: 25px;
+  font-size: 20px;
   color: #565656;
 }
 .date .date__content .date__connect-link {
-  padding-left: 20px;
+  padding-left: 18px;
 }
 .date .date__content .date__connect-link .date__link {
   color: #1D9BF0;
   padding-bottom: 2px;
   border-bottom: 1px solid #1D9BF0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /*Стили для календаря*/
@@ -837,7 +847,7 @@ h4 {
     font-size: calc(14px + 11 * (100vw - 320px) / 1600);
   }
 
-  h4 {
+  .meeting__title-text {
     font-size: calc(20px + 10 * (100vw - 320px) / 1600);
   }
 
@@ -846,6 +856,19 @@ h4 {
   }
   .meetings .meeting__info-text {
     font-size: calc(15px + 5 * (100vw - 320px) / 1600);
+  }
+
+  .schedule .date .date__day {
+    font-size: calc(35px + 20 * (100vw - 320px) / 1600);
+  }
+  .schedule .date .date__month {
+    font-size: calc(12px + 8 * (100vw - 320px) / 1600);
+  }
+  .schedule .date .date__name {
+    font-size: calc(18px + 7 * (100vw - 320px) / 1600);
+  }
+  .schedule .date .date__connect .date__time, .schedule .date .date__connect .date__link {
+    font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   }
 
   .evaluation .evaluation__title-circle {
@@ -870,6 +893,10 @@ h4 {
   }
 }
 @media (max-width: 1439px) {
+  .date {
+    height: 140px;
+  }
+
   .history .history__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -904,6 +931,26 @@ h4 {
             align-items: flex-start;
   }
   .meetings .meet__elements .meeting_element {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .schedule .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .schedule .date {
     width: 100%;
   }
 }
@@ -1063,6 +1110,11 @@ h4 {
     margin-top: 20px;
   }
 
+  .navigation {
+    width: 100%;
+    height: 100%;
+  }
+
   section {
     width: 100%;
     margin: 0 auto;
@@ -1093,6 +1145,10 @@ h4 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .date {
+    width: 100%;
   }
 }
 @media (max-width: 360px) {
