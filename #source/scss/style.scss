@@ -217,6 +217,7 @@ section {
   width: 100%;
   position: fixed;
   z-index: 50;
+  padding: 5px 0 0 0;
 }
 .logo {
   width: 40px;
@@ -289,17 +290,19 @@ h4 {
 }
 .meeting__element-text {
   font-size: 25px;
-  line-height: 37.5px;
   color: #565656;
 }
 .meeting__title-text{
   font-size: 30px;
   color: #222;
-  line-height: 45px;
 }
 .meeting__info-text {
   font-size: 20px;
   color: #394959;
+  a{
+    color: #1D9BF0;
+    border-bottom: 1px solid #1D9BF0;
+  }
 }
 .meetings_header {
   margin-bottom: 20px;
@@ -348,7 +351,14 @@ h4 {
       margin-bottom: 25px;
       a {
         color: #fff;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: 0.4s ease-in-out;
       }
+        :hover{
+          border-bottom: 1px solid #fff;
+          transition: 0.4s ease-in-out;
+        }
     }
   }
 }
@@ -792,7 +802,7 @@ h4 {
 		font-size: calc(18px + (35 - 18) * ((100vw - 320px) / (1920 - 320)));
 	  }
 	  .evaluation__title-name{
-		font-size: calc(25px + (35 - 25) * ((100vw - 320px) / (1920 - 320)));
+		font-size: calc(22px + (35 - 22) * ((100vw - 320px) / (1920 - 320)));
 	  }
 	  .evaluation__description{
 		font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (1920 - 320)));
@@ -834,9 +844,9 @@ h4 {
 			}
 		}
 	}
-	.eventCalendar-slider{
+	/*.eventCalendar-slider{
 		max-height: 370px;
-	}
+	}*/
   }
   @media (max-width: 1200px){
 	  .meetings{
@@ -985,6 +995,12 @@ h4 {
   .account_list{
     justify-content: space-between;
   }
+  .history__list-unit{
+    margin-bottom: 15px;
+    img{
+      width: 30px;
+    }
+  }
 }
 @media (max-width: 500px){
 	.account{
@@ -1033,6 +1049,9 @@ h4 {
   .history{
     .history__block{
       justify-content: flex-start;
+    }
+    .history__header{
+      margin-bottom: 15px;
     }
   }
   .date{
