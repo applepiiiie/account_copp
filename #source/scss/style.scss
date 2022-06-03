@@ -784,6 +784,9 @@ h4 {
       .date__day{
         font-size: calc(35px + (55 - 35) * ((100vw - 320px) / (1920 - 320)));
       }
+      .date__name{
+        font-size: calc(25px + (30 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+      }
       .date__month{
         font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
       }
@@ -865,6 +868,9 @@ h4 {
       }
       .date{
         width: 100%;
+        .date__name{
+          font-size: calc(22px + (30 - 22) * ((100vw - 320px) / (1200 - 320)));
+        }
       }
     }
   }
@@ -992,24 +998,8 @@ h4 {
       max-width: 40px;
     }
   }
-  .schedule{
-    .date{
-      .date__name{
-        font-size: 25px;
-      }
-    }
-  }
 }
-
-
 @media (max-width: 500px){	
-  .schedule{
-    .date{
-      .date__name{
-        font-size: 22px;
-      }
-    }
-  }
   .account_list{
     justify-content: space-between;
   }

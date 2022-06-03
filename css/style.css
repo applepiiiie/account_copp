@@ -873,6 +873,9 @@ h4 {
   .schedule .date .date__day {
     font-size: calc(35px + 20 * (100vw - 320px) / 1600);
   }
+  .schedule .date .date__name {
+    font-size: calc(25px + 5 * (100vw - 1200px) / 720);
+  }
   .schedule .date .date__month {
     font-size: calc(12px + 8 * (100vw - 320px) / 1600);
   }
@@ -960,6 +963,9 @@ h4 {
   }
   .schedule .date {
     width: 100%;
+  }
+  .schedule .date .date__name {
+    font-size: calc(22px + 8 * (100vw - 320px) / 880);
   }
 }
 @media (max-width: 960px) {
@@ -1103,16 +1109,8 @@ h4 {
   .meetings img {
     max-width: 40px;
   }
-
-  .schedule .date .date__name {
-    font-size: 25px;
-  }
 }
 @media (max-width: 500px) {
-  .schedule .date .date__name {
-    font-size: 22px;
-  }
-
   .account_list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
