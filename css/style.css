@@ -488,16 +488,15 @@ h4 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
   width: 80%;
 }
 .date .date__content .date__name {
-  font-size: 25px;
+  font-size: 30px;
   color: #394959;
-  margin-bottom: 15px;
 }
 .date .date__content img {
   padding: 5px;
@@ -876,9 +875,6 @@ h4 {
   .schedule .date .date__month {
     font-size: calc(12px + 8 * (100vw - 320px) / 1600);
   }
-  .schedule .date .date__name {
-    font-size: calc(18px + 7 * (100vw - 320px) / 1600);
-  }
   .schedule .date .date__connect .date__time, .schedule .date .date__connect .date__link {
     font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   }
@@ -945,8 +941,7 @@ h4 {
   .meetings .meet__elements .meeting_element {
     width: 100%;
   }
-}
-@media (max-width: 1024px) {
+
   .schedule .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1084,6 +1079,15 @@ h4 {
   .evaluation .progress .progress__bar-img {
     width: 50px;
   }
+
+  .navigation {
+    width: 60%;
+    height: 100%;
+  }
+  .navigation .navigation_img img {
+    width: 100px;
+    padding-top: 20px;
+  }
 }
 @media (max-width: 768px) {
   .navigation {
@@ -1098,8 +1102,16 @@ h4 {
   .meetings img {
     max-width: 40px;
   }
+
+  .schedule .date .date__name {
+    font-size: 25px;
+  }
 }
 @media (max-width: 500px) {
+  .schedule .date .date__name {
+    font-size: 22px;
+  }
+
   .account_list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1132,6 +1144,10 @@ h4 {
   .navigation {
     width: 100%;
     height: 100%;
+  }
+  .navigation .navigation_img img {
+    width: 100px;
+    padding-top: 20px;
   }
 
   section {
